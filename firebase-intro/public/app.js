@@ -27,3 +27,30 @@ auth.onAuthStateChanged(user => {
     }
     
 });
+
+const db = firebase.firestore();
+
+const createThing = document.getElementById('createThing');
+const thingsList = document.getElementById('thingsList');
+
+let thingsRef;
+let unsubscribe;
+
+auth.onAuthStateChanged(user => {
+    if (user) {
+
+        // Database Reference
+        thingsRef = db.collection('things')
+
+        createThing.onclick = () => {
+
+            const { serverTimestamp } = firebase.firestore.FieldValue;
+
+            thingsRef.add({
+                uid: user.uid,
+                name: faker.commerce.productName(),
+                createdAt: serverTimestamp()
+            });
+        }   
+    }
+});
