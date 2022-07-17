@@ -3,6 +3,7 @@ import { UserContext } from '../lib/context';
 import { useContext } from 'react';
 import { useEffect, useState, useCallback } from 'react';
 import debounce from 'lodash.debounce';
+import MetaTags from '../components/Metatags';
 
 export default function EnterPage({ }) {
   const { user, username } = useContext(UserContext);
@@ -12,6 +13,7 @@ export default function EnterPage({ }) {
   // 3. user signed in, has username <SignOutButton />
   return (
     <main>
+      <MetaTags title="Sign In"/>
       {user ? 
         !username ? <UsernameForm /> : <SignOutButton /> 
         : 

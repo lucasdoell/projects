@@ -7,6 +7,7 @@ import { useState } from 'react'
 import toast from 'react-hot-toast'
 import { firestore, fromMillis, postToJSON } from '../lib/firebase';
 import PostFeed from '../components/PostFeed'
+import MetaTags from '../components/Metatags'
 
 const LIMIT = 1;
 
@@ -30,6 +31,7 @@ export default function Home(props) {
 
   const [postsEnd, setPostsEnd] = useState(false);
 
+  // Get next page in pagination query
   const getMorePosts = async () => {
     setLoading(true);
     const last = posts[posts.length - 1];
@@ -55,6 +57,7 @@ export default function Home(props) {
 
   return (
       <main>
+        <MetaTags title="Home"/>
         <PostFeed posts={posts} />
 
         {!loading && !postsEnd && <button onClick={getMorePosts}>Load more</button>}
