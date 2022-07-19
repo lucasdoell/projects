@@ -58,14 +58,14 @@ export default function Home(props) {
   return (
       <main>
         <MetaTags title="Home"/>
-        
-
-        <div className="card card-info">
-          <h2>Nextfire - built with Next.js and Firebase</h2>
-          <p>Welcome! This app is built with Next.js and Firebase and is loosely inspired by Dev.to.</p>
-          <p>Sign up for an 👨‍🎤 account, ✍️ write posts, then 💞 heart content created by other users. All public content is server-rendered and search-engine optimized.</p>
-          <break />
-          <p>This site was made following a tutorial on <Link href={'https://fireship.io'}><a>Fireship</a></Link>.</p> 
+      
+        <div className="card card-info bg-blue-500">
+          <h2 className='font-bold text-2xl'>Nextfire - built with Next.js and Firebase</h2>
+          <p className='text-lg'>Welcome! This app is built with Next.js and Firebase and is loosely inspired by Dev.to.</p>
+          <br/>
+          <p className='text-lg'>Sign up for an 👨‍🎤 account, ✍️ write posts, then 💞 heart content created by other users. All public content is server-rendered and search-engine optimized.</p>
+          <br/>
+          <p className='text-lg'>This site was made following a tutorial on <Link href={'https://fireship.io'}><a>Fireship</a></Link>.</p> 
         </div>
 
         <PostFeed posts={posts} />
