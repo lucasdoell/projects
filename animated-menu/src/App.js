@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ReactComponent as ArrowIcon } from './icons/arrow.svg'
 import { ReactComponent as BellIcon } from './icons/bell.svg'
-import { ReactComponent as BoltIcon } from './icons/bolt.svg'
+import { ReactComponent as ProfileIcon } from './icons/person.svg'
 import { ReactComponent as CaretIcon } from './icons/caret.svg'
 import { ReactComponent as ChevronIcon } from './icons/chevron.svg'
 import { ReactComponent as CogIcon } from './icons/cog.svg'
@@ -78,7 +78,7 @@ function DropdownMenu() {
       >
 
         <div className="menu">
-          <DropdownItem>My Profile</DropdownItem>
+          <DropdownItem leftIcon={<ProfileIcon />}>My Profile</DropdownItem>
           <DropdownItem leftIcon={<CogIcon />} rightIcon={<ChevronIcon />} goToMenu="settings">
             Settings
           </DropdownItem>
