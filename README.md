@@ -4,7 +4,7 @@ My projects repository is for personal projects to mess around with, in a variet
 
 
 ### Project Directory
-| Name | Technology Used |
+| Name               | Technology Used     |
 | ------------------ | ------------------- |
 | animated-menu      | React               | 
 | css-curves         | HTML & CSS          |
